@@ -1,5 +1,5 @@
-const {myDb} = require ("../database/db.js")
-const router = require('../Routes/task.route')
+const { myDb } = require ("../server/database/db.js")
+const router = require("./Routes/task.route")
 
 const cors = require("cors");
 const express = require("express");

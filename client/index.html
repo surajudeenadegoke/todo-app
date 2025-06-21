@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>📝 My To-Do App </h1>
+  </header>
+
+  <!-- Create Task -->
+  <section class="task-input">
+    <input type="text" id="new-task-input" placeholder="Enter a new task..." />
+    <button id="add-task-button">➕ Add Task</button>
+  </section>
+
+  <!-- Task List -->
+  <ul id="task-list" class="task-list"></ul>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>✏️ Update Task</h2>
+      <input type="text" id="edit-task-input" />
+      <div class="modal-actions">
+        <button id="cancel-edit" class="cancel">Cancel</button>
+        <button id="save-edit" class="save">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
+
+

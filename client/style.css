@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Task Input */
+.task-input {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-input input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.task-input button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.task-input button:hover {
+  background: darkgreen;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  max-width: 700px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.task-item {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.task-text {
+  font-size: 16px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* CRUD Buttons */
+.btn {
+  margin-left: 10px;
+  border: none;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn.edit {
+  background: orange;
+  color: white;
+}
+
+.btn.delete {
+  background: red;
+  color: white;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions .cancel {
+  background: gray;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+}
+
+.modal-actions .save {
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+}

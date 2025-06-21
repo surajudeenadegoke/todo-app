@@ -8,7 +8,7 @@ const saveEditBtn = document.getElementById("save-edit");
 const cancelEditBtn = document.getElementById("cancel-edit");
 
 let editingTaskId = null;
-const BASE_URL = `http://localhost:3000/api/task`;
+const BASE_URL = `https://localhost:3000/api/task/`;
 
 async function fetchTasks() {
   const res = await fetch(BASE_URL);

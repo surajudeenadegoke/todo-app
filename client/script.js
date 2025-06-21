@@ -13,10 +13,18 @@ let editingTaskId = null;
 
 // Fetch and render all tasks
 async function fetchTasks() {
-  const res = await fetch(BASE_URL);
-  const tasks = await res.json();
-  renderTasks(tasks);
+  try {
+    const res = await fetch(BASE_URL);
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    const tasks = await res.json();
+    console.log('Fetched tasks:', tasks);
+    renderTasks(tasks);
+  } catch (error) {
+    console.error('Failed to fetch tasks:', error.message);
+    alert("Couldn't connect to the backend. Please check your internet or backend status.");
+  }
 }
+
 
 // Render tasks in the UI
 function renderTasks(tasks) {

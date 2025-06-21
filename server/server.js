@@ -1,6 +1,6 @@
 require("dotenv").config();
-const { myDb } = require("../server/database/db.js");
-const router = require("./Routes/task.route");
+const { myDb } = require("./database/db.js");
+const router = require("./Routes/task.route.js");
 
 const cors = require("cors");
 const bodyParser = require("body-parser");

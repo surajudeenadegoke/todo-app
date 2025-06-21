@@ -5,7 +5,6 @@ body {
   padding: 0;
 }
 
-/* Header */
 header {
   background-color: #007bff;
   color: white;
@@ -13,7 +12,6 @@ header {
   text-align: center;
 }
 
-/* Task Input */
 .task-input {
   display: flex;
   justify-content: center;
@@ -41,7 +39,6 @@ header {
   background: darkgreen;
 }
 
-/* Task List */
 .task-list {
   list-style: none;
   max-width: 700px;
@@ -81,7 +78,6 @@ header {
   color: gray;
 }
 
-/* CRUD Buttons */
 .btn {
   margin-left: 10px;
   border: none;
@@ -100,7 +96,6 @@ header {
   color: white;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -149,3 +144,4 @@ header {
   padding: 8px 16px;
   border: none;
 }
+

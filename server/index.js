@@ -1,17 +1,21 @@
-const { myDb } = require ("../server/database/db.js")
-const router = require("./Routes/task.route")
+require("dotenv").config();
+const { myDb } = require("../server/database/db.js");
+const router = require("./Routes/task.route");
 
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const express = require("express");
-const app = express();
-const port = process.env.PORT || 8080;
 
 myDb();
 
-app.use(express.json());
-app.use(cors());
-app.use('/',router)
+const app = express();
+const PORT = process.env.PORT || 8000;
 
-app.listen(port, () => {
-  console.log(`listening on port: ${port}`);
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use("/", router);
+
+app.listen(PORT, () => {
+  console.log(`Listening on http://localhost:${PORT}`);
 });

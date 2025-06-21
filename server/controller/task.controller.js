@@ -2,6 +2,7 @@ const Task = require("../models/task.model.js");
 const addTask = async (req, res) => {
   try {
     const task = await new Task(req.body).save();
+    console.log(task)
     res.send(task);
   } catch (error) {
     res.status(401).send(error.message);
@@ -10,7 +11,7 @@ const addTask = async (req, res) => {
 const getTasks = async (req, res) => {
   try {
     const tasks = await Task.find();
-    res.send(tasks);
+    tasks.length == 0 ? res.send("Task Database  is empty") :console.log(tasks); res.send(tasks);
   } catch (error) {
     res.send(error.message);
   }

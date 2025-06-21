@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({ origin: "https://todo-app-psi-coral.vercel.app/" }));
 app.use("/", router);
 
 app.listen(PORT, () => {

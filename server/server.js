@@ -12,9 +12,12 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({ origin: "https://todo-app-psi-coral.vercel.app/" }));
 app.use("/", router);
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
 
 app.listen(PORT, () => {
   console.log(`Listening on http://localhost:${PORT}`);
